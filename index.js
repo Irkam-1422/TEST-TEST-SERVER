@@ -1,13 +1,19 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const { route } = require('./routes/route')
+const route = require('./routes/route');
 
 const PORT = process.env.PORT || 4000
 const db = "mongodb+srv://expansion4you:xH7Rd6ji1Ya413xm@cluster0.kgapqpo.mongodb.net/" 
 
 const app = express() 
-app.use(route)
-
+app.use(express.json({ extended: true }))
+app.use(route);
+app.get("/", (req, res) => {
+    res.send("Hello from node!");
+})
+// app.get("/route", (req, res) => {
+//     res.send("Ignite your business growth!");
+// })
 
 async function start() { 
     try {
@@ -22,4 +28,4 @@ async function start() {
         process.exit(1)
     }
 }
-start()
+start();
