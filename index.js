@@ -1,5 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const { route } = require('./routes/route')
 
 const PORT = process.env.PORT || 4000
 const db = "mongodb+srv://expansion4you:xH7Rd6ji1Ya413xm@cluster0.kgapqpo.mongodb.net/" 
