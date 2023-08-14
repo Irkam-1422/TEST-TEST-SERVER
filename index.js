@@ -5,6 +5,8 @@ const PORT = process.env.PORT || 4000
 const db = "mongodb+srv://expansion4you:xH7Rd6ji1Ya413xm@cluster0.kgapqpo.mongodb.net/" 
 
 const app = express() 
+app.use(route)
+
 
 async function start() { 
     try {
