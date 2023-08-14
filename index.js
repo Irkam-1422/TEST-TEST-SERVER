@@ -7,13 +7,10 @@ const db = "mongodb+srv://expansion4you:xH7Rd6ji1Ya413xm@cluster0.kgapqpo.mongod
 
 const app = express() 
 app.use(express.json({ extended: true }))
-app.use(route);
 app.get("/", (req, res) => {
     res.send("Hello from node!");
 })
-// app.get("/route", (req, res) => {
-//     res.send("Ignite your business growth!");
-// })
+app.use(route);
 
 async function start() { 
     try {
